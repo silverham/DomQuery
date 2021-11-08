@@ -108,6 +108,7 @@ DomQuery::create('<a title="hello"></a>')->attr('title') // hello
 - `.wrap( [content] )`
 - `.wrapAll( [content] )`
 - `.wrapInner( [content] )`
+- `.unwrap( )`
 - `.remove( [selector] )`
 
 <sub>\* __[content]__ can be html or an instance of DomQuery|DOMNodeList|DOMNode</sub>
