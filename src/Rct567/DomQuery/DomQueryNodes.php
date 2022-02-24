@@ -305,7 +305,12 @@ class DomQueryNodes implements \Countable, \IteratorAggregate, \ArrayAccess
         }
 
         $this->length = \count($this->nodes);
-        $this->setDomDocument($dom_node->ownerDocument);
+        if ($dom_node instanceof \DOMDocument) {
+            $this->setDomDocument($dom_node);
+        }
+        else {
+            $this->setDomDocument($dom_node->ownerDocument);
+        }
     }
 
     /**
